@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buenas Viagens</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <div class="fundo-topo">
+
+        <header>
+            <nav>
+                <div class="logo">Buenas Viagens!</div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#passeios">Passeios</a></li>
+                        <li><a href="#destinos">Destinos</a></li>
+                        <li><a href="#avaliacoes">Avaliações</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero_sec">
+                <h1 class="titulo_central">EXPLORE O MUNDO!</h1>
+
+                <div class="barra_pesquisa">
+                    <div class="campo_grupo">
+                        <label for="local_viagem">Para onde vamos?</label>
+                        <input type="text" id="local_viagem" placeholder="Digite o destino">
+                    </div>
+
+                    <div class="campo_grupo">
+                        <label for="dt_viagem">Quando?</label>
+                        <input type="date" id="dt_viagem">
+                    </div>
+
+                    <div class="campo_grupo">
+                        <label for="dt_retorno">Retorno</label>
+                        <input type="date" id="dt_retorno">
+                    </div>
+
+                    <button class="btn_buscar">Buscar</button>
+                </div>
+            </section>
+        </main>
+
+    </div>
+    <main>
+
+        <section class="sec_passeios" id="passeios">
+            <div class="passeios_conteudo">
+                <h2 class="passeios_titulo">Próximos Passeios & Destinos</h2>
+                <span class="linha_decorativa"></span>
+
+                <p class="passeios_texto">
+                    Descubra roteiros cuidadosamente selecionados para transformar sua próxima viagem em uma experiência
+                    inesquecível. Dos cenários tropicais das praias paradisíacas ao choque cultural de metrópoles
+                    ultramodernas, nós conectamos você aos destinos mais desejados do mundo. Explore culturas ricas,
+                    culinárias exóticas e paisagens de tirar o fôlego com o suporte completo que você merece.
+                </p>
+
+                <a href="#destinos" class="btn_saiba_mais">Saiba mais</a>
+            </div>
+
+            <div class="passeios_grid_fotos">
+                <div class="card_foto">
+                    <img src="./img/CardPasseio1.jpg" alt="Família andando de mãos dadas na praia">
+                </div>
+                <div class="card_foto">
+                    <img src="./img/CardPasseio2.jpg" alt="Casal feliz viajando de bicicleta e olhando mapa">
+                </div>
+                <div class="card_foto">
+                    <img src="./img/CardPAsseio3.jpg" alt="Casal em um lago, com Monte Fuji ao fundo">
+                </div>
+                <div class="card_foto">
+                    <img src="./img/CardPasseio4.jpg"
+                        alt="Pessoa sentada no topo de uma montanha observando o horizonte">
+                </div>
+            </div>
+        </section>
+
+        <section class="sec_destinos" id="destinos">
+            <h2 class="destinos_titulo">Para onde você quer viajar?</h2>
+
+            <div class="destinos_grid">
+
+                <article class="card_destino">
+                    <div class="card_destino_img">
+                        <img src="./img/BarcelonaEspanha.jpg" alt="Parque Güell em Barcelona">
+                    </div>
+                    <div class="card_destino_info">
+                        <h3><strong>Barcelona</strong>, Espanha</h3>
+                        <p>Explore a impressionante arquitetura de Antoni Gaudí, praias urbanas vibrantes e o charme das
+                            ruelas do Bairro Gótico.</p>
+                        <div class="card_destino_rodape">
+                            <div class="precos">
+                                <span class="preco_atual">R$ 3.900,00</span>
+                                <span class="preco_antigo">R$ 4.400,00</span>
+                            </div>
+                            <a href="#" class="btn_saiba_mais_card">Saiba mais</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card_destino">
+                    <div class="card_destino_img">
+                        <img src="./img/ShibuyaToquuio.avif" alt="Shibuya, Tóquio de noite">
+                    </div>
+                    <div class="card_destino_info">
+                        <h3><strong>Tóquio</strong>, Japão</h3>
+                        <p>Viva o contraste perfeito entre templos ancestrais e arranha-céus iluminados por neon na
+                            metrópole mais tecnológica do mundo.</p>
+                        <div class="card_destino_rodape">
+                            <div class="precos">
+                                <span class="preco_atual">R$ 3.700,00</span>
+                                <span class="preco_antigo">R$ 4.300,00</span>
+                            </div>
+                            <a href="#" class="btn_saiba_mais_card">Saiba mais</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card_destino">
+                    <div class="card_destino_img">
+                        <img src="./img/MIlao.jpg" alt="Duomo de Milão">
+                    </div>
+                    <div class="card_destino_info">
+                        <h3><strong>Milão</strong>, Itália</h3>
+                        <p>Respire a alta moda mundial, visite a imponente catedral Duomo e desfrute do melhor da
+                            gastronomia italiana clássica.</p>
+                        <div class="card_destino_rodape">
+                            <div class="precos">
+                                <span class="preco_atual">R$ 3.500,00</span>
+                                <span class="preco_antigo">R$ 4.200,00</span>
+                            </div>
+                            <a href="#" class="btn_saiba_mais_card">Saiba mais</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card_destino">
+                    <div class="card_destino_img">
+                        <img src="./img/Londres.jpg" alt="Big Ben em Londres">
+                    </div>
+                    <div class="card_destino_info">
+                        <h3><strong>Londres</strong>, Inglaterra</h3>
+                        <p>Caminhe pela história às margens do Rio Tâmisa, veja os palácios reais e aproveite a rica
+                            cena cultural dos museus gratuitos.</p>
+                        <div class="card_destino_rodape">
+                            <div class="precos">
+                                <span class="preco_atual">R$ 4.200,00</span>
+                                <span class="preco_antigo">R$ 4.800,00</span>
+                            </div>
+                            <a href="#" class="btn_saiba_mais_card">Saiba mais</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card_destino">
+                    <div class="card_destino_img">
+                        <img src="./img/Suica.jpg" alt="Vale de Lauterbrunnen na Suíça">
+                    </div>
+                    <div class="card_destino_info">
+                        <h3><strong>Lauterbrunnen</strong>, Suíça</h3>
+                        <p>Encante-se por um vale alpino saído dos contos de fadas, cercado por 72 cachoeiras e
+                            montanhas cobertas de neve.</p>
+                        <div class="card_destino_rodape">
+                            <div class="precos">
+                                <span class="preco_atual">R$ 3.900,00</span>
+                                <span class="preco_antigo">R$ 4.300,00</span>
+                            </div>
+                            <a href="#" class="btn_saiba_mais_card">Saiba mais</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card_destino">
+                    <div class="card_destino_img">
+                        <img src="./img/Paris.jpg" alt="Torre Eiffel em Paris">
+                    </div>
+                    <div class="card_destino_info">
+                        <h3><strong>Paris</strong>, França</h3>
+                        <p>Sinta o romance da Cidade Luz visitando a Torre Eiffel, navegando pelo Rio Sena e explorando
+                            cafés charmosos.</p>
+                        <div class="card_destino_rodape">
+                            <div class="precos">
+                                <span class="preco_atual">R$ 4.500,00</span>
+                                <span class="preco_antigo">R$ 5.300,00</span>
+                            </div>
+                            <a href="#" class="btn_saiba_mais_card">Saiba mais</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="sec_avaliacoes" id="avaliacoes">
+            <h2 class="avaliacoes_titulo">Avaliações dos Clientes</h2>
+
+            <div class="carrossel_container">
+                <button class="seta_carrossel seta_esquerda" id="btn_ant">&#10094;</button>
+
+                <div class="carrossel_janela">
+                    <div class="carrossel_slides" id="slider_palco">
+
+                        <div class="depoimento_card ativo">
+                            <p class="depoimento_texto">
+                                "Viajar com a Buenas Viagens foi a melhor escolha que fiz. O roteiro para Tóquio superou
+                                todas as minhas expectativas, hotéis excelentes e suporte impecável do início ao fim.
+                                Mal posso esperar para planejar o próximo destino!"
+                            </p>
+                            <div class="avatar_wrapper">
+                                <img src="./img/Avaliador1.jpg" alt="Foto de Patrícia">
+                            </div>
+                            <span class="autor_nome"><strong>Patrícia</strong>, Jornalista</span>
+                        </div>
+
+                        <div class="depoimento_card">
+                            <p class="depoimento_texto">
+                                "Fui para Barcelona e a organização foi nota 10. Os cards de passeios do site
+                                facilitaram muito a minha escolha. Recomendo de olhos fechados!"
+                            </p>
+                            <div class="avatar_wrapper">
+                                <img src="./img/Avaliador2.jpg" alt="Foto de Ricardo">
+                            </div>
+                            <span class="autor_nome"><strong>Ricardo</strong>, Engenheiro de Software</span>
+                        </div>
+
+                        <div class="depoimento_card">
+                            <p class="depoimento_texto">
+                                "Lauterbrunnen na Suíça parecia um sonho! Todo o processo de compra e suporte das datas
+                                de retorno foi super transparente e rápido."
+                            </p>
+                            <div class="avatar_wrapper">
+                                <img src="./img/Avaliador3.jpg" alt="Foto de Camila">
+                            </div>
+                            <span class="autor_nome"><strong>Camila</strong>, Fotógrafa</span>
+                        </div>
+
+                        <div class="depoimento_card">
+                            <p class="depoimento_texto">
+                                "O pacote para Paris superou o custo-benefício de todas as agências que pesquisei. O
+                                site deles é muito prático e direto ao ponto."
+                            </p>
+                            <div class="avatar_wrapper">
+                                <img src="./img/Avaliador4.jpg" alt="Foto de Bruno">
+                            </div>
+                            <span class="autor_nome"><strong>Bruno</strong>, Administrador</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="seta_carrossel seta_direita" id="btn_prox">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape_site">
+        <div class="rodape_container">
+
+            <div class="rodape_coluna logo_col">
+                <h2 class="logo_rodape">Buenas Viagens!</h2>
+                <address class="dados_empresa">
+                    <strong>Buenas Viagens & Turismo S.A.</strong><br>
+                    Avenida da Boa Vista, 1234<br>
+                    Porto, Portugal
+                </address>
+                <p class="copyright">Buenas Viagens & Turismo S.A. &copy; Todos os direitos reservados 2026</p>
+            </div>
+
+            <div class="rodape_coluna links_col">
+                <h3>NOSSOS PARCEIROS</h3>
+                <ul>
+                    <li><a href="#">Consectetur Adipisicing</a></li>
+                    <li><a href="#">Pariatur Autem Harum</a></li>
+                    <li><a href="#">Distinctio Laudantium Ducimus</a></li>
+                    <li><a href="#">Temporibus Vel Magnam</a></li>
+                    <li><a href="#">Commodi Sed Quaerat</a></li>
+                    <li><a href="#">Quas Perspiciatis Blanditiis</a></li>
+                    <li><a href="#">Aspernatur</a></li>
+                </ul>
+            </div>
+
+            <div class="rodape_coluna acoes_col">
+                <h3>ASSINE A NOSSA NEWSLETTER</h3>
+                <form class="form_newsletter" action="#" method="POST">
+                    <input type="email" placeholder="Informe seu E-mail" required aria-label="E-mail para newsletter">
+                    <button type="submit" class="btn_enviar">Enviar</button>
+                </form>
+
+                <div class="icones_redes">
+                    <a href="#" class="icone_social" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#" class="icone_social" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#" class="icone_social" aria-label="X / Twitter">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="faixa_decorativa_final"></div>
+    </footer>
+
+</body>
+<script src="./js/app.js"></script>
+
+</html>

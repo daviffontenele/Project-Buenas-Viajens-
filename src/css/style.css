@@ -1,0 +1,730 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: rgb(235, 237, 240);
+}
+
+/*  MENU  */
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    background-color: #1a365d;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 28px;
+}
+
+.menu ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    opacity: 0.8;
+}
+
+/* Hero Section*/
+.hero_sec {
+    height: 580px; /*Altura fixa da imagem de destaque */
+    background-image: linear-gradient(rgba(0, 50, 100, 0.25), rgba(0, 0, 0, 0.15)), 
+                      url("../img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    width: 100%;
+}
+
+/* Texto central */
+.titulo_central {
+    color: white;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+
+    /* Posição absoluta calculada perfeitamente sobre a metade da imagem */
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    margin: 0;
+}
+
+/* Barra de pesquisa */
+.barra_pesquisa {
+    display: flex;
+    background-color: white;
+    width: 90%;
+    max-width: 1100px;
+    padding: 25px 35px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+    align-items: flex-end;
+
+    /* Posição absoluta em relação à base da imagem */
+    position: absolute;   
+    bottom: -35px; /*  Corta a borda da foto */
+    left: 50%;            
+    transform: translateX(-50%); 
+    z-index: 10; /* Garante que fique por cima do conteúdo abaixo */
+}
+
+.campo_grupo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.campo_grupo label {
+    font-size: 14px;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.campo_grupo input {
+    height: 45px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    color: #333;
+    width: 100%;
+}
+
+.btn_buscar {
+    background-color: #ffaa3b;
+    color: white;
+    border: none;
+    height: 45px;
+    padding: 0 40px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn_buscar:hover {
+    background-color: #e5932a;
+}
+
+
+/* Seçao Proximos Passeios */
+.sec_passeios {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px; 
+    
+    /* padding-top de 120px serve para afastar o texto da barra branca  */
+    padding: 120px 10% 80px 10%; 
+    background-color: white;
+}
+
+/* Lado esquerdo - Textos */
+.passeios_conteudo {
+    flex: 1; 
+    max-width: 500px;
+}
+
+.passeios_titulo {
+    font-family: 'Pacifico', cursive; 
+    color: #6366f1; 
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.linha_decorativa {
+    display: block;
+    width: 180px;
+    height: 5px;
+    background-color: #ffaa3b; 
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.passeios_texto {
+    color: #4b5563; 
+    font-size: 16px;
+    line-height: 1.6; 
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.btn_saiba_mais {
+    display: inline-block;
+    background-color: #ffaa3b;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 12px 35px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 10px rgba(255, 170, 59, 0.3);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn_saiba_mais:hover {
+    background-color: #e5932a;
+    transform: translateY(-2px); 
+}
+
+/* Lado direito - Grades fotos */
+.passeios_grid_fotos {
+    flex: 1.2; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 25px; 
+    max-width: 650px;
+}
+
+.card_foto {
+    background-color: white;
+    padding: 10px; 
+    border-radius: 8px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08); 
+    height: 320px; /* Altura fixa para as fotos alinharem */
+    width: 100%;
+    height: auto; /* Remove a altura fixa do card */ 
+    display: flex;
+}
+
+
+
+.card_foto img {
+    width: 100%;
+    height: auto; /* A altura da imagem acompanha a proporção original dela */
+    object-fit: cover; 
+    border-radius: 4px;
+    display: block;
+}
+
+
+/* Seção Destinos*/
+.sec_destinos {
+    /* Degradê suave  */
+    background: linear-gradient(135deg, #fcefe9 0%, #d6d1fa 100%);
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.destinos_titulo {
+    font-family: 'Pacifico', cursive;
+    color: #6366f1;
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+/* Grade GRID */
+.destinos_grid {
+    display: grid;
+    /* Divide o espaço em 3 colunas iguais automaticamente */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; /* Espaçamento idêntico entre os cards horizontal e verticalmente */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card individual*/
+.card_destino {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column; /* Organiza imagem no topo e textos embaixo */
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card_destino:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+.card_destino_img {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.card_destino_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preenche o espaço cortando sobras sem distorcer */
+    object-position: center;
+}
+
+/* Bloco interno de textos */
+.card_destino_info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Faz a área de texto esticar por igual se um parágrafo for maior */
+}
+
+.card_destino_info h3 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.card_destino_info h3 strong {
+    font-weight: 700;
+}
+
+.card_destino_info p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+
+.card_destino_rodape {
+    margin-top: auto; /* Força esse bloco a colar sempre no final do card */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.precos {
+    display: flex;
+    flex-direction: column;
+}
+
+.preco_atual {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.preco_antigo {
+    font-size: 13px;
+    color: #999;
+    text-decoration: line-through; /* Linha riscando o preço antigo */
+    margin-top: 2px;
+}
+
+/* Botão menor específico para os cards */
+.btn_saiba_mais_card {
+    background-color: #ffaa3b;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.btn_saiba_mais_card:hover {
+    background-color: #e5932a;
+}
+
+/*Seção Avaliações  */
+.sec_avaliacoes {
+    background-color: white;
+    padding: 90px 10%;
+    text-align: center;
+}
+
+.avaliacoes_titulo {
+    font-family: 'Pacifico', cursive;
+    color: #6366f1;
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.carrossel_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.carrossel_janela {
+    flex: 1;
+    overflow: hidden; /* Esconde qualquer vazamento visual */
+    max-width: 700px;
+}
+
+.carrossel_slides {
+    position: relative;
+    width: 100%;
+}
+
+/* Card do depoimento */
+.depoimento_card {
+    display: none; /* ESCONDE TODOS OS SLIDES POR PADRÃO */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* Transição suave ao aparecer */
+    animation: fadeEffect 0.6s ease-in-out; 
+}
+
+/* MOSTRA APENAS O CARD ATIVO */
+.depoimento_card.ativo {
+    display: flex; 
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+.depoimento_texto {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 35px;
+    text-align: center;
+    min-height: 80px; /* Evita que o layout pule se o texto for menor */
+}
+
+.avatar_wrapper {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 4px solid #ffaa3b;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.avatar_wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.autor_nome {
+    font-size: 15px;
+    color: #666;
+}
+
+.autor_nome strong {
+    color: #333;
+}
+
+/* Setas */
+.seta_carrossel {
+    background-color: #cbd5e1;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 10;
+}
+
+.seta_carrossel:hover {
+    background-color: #94a3b8;
+}
+
+
+/* FOOTER    */
+
+.rodape_site {
+    background-color: #3f4753; /* Cinza azulado escuro do fundo */
+    color: #cbd5e1;
+    width: 100%;
+}
+
+.rodape_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 5% 50px 5%;
+}
+
+.rodape_coluna {
+    flex: 1;
+}
+
+/* Coluna 1 */
+.logo_rodape {
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.dados_empresa {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #9fadc1;
+    margin-bottom: 25px;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #7f8e9f;
+}
+
+/* Coluna 2 (Links) */
+.rodape_coluna h3 {
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.links_col ul {
+    list-style: none;
+}
+
+.links_col li {
+    margin-bottom: 10px;
+}
+
+.links_col a {
+    color: #9fadc1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.links_col a:hover {
+    color: white;
+}
+
+/* Coluna 3 (Newsletter e Form) */
+.form_newsletter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #576171; /* Linha divisória abaixo do input */
+    padding-bottom: 30px;
+}
+
+.form_newsletter input {
+    flex: 1;
+    height: 42px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.btn_enviar {
+    background-color: #ffaa3b;
+    color: white;
+    border: none;
+    font-weight: 700;
+    padding: 0 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.btn_enviar:hover {
+    background-color: #e5932a;
+}
+
+/* Icones redes Sociais */
+.icones_redes {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.icone_social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; 
+    height: 40px;
+    border: 1px solid #7f8e9f; 
+    border-radius: 50%;        /* Faz ficar perfeitamente redondo */
+    color: #9fadc1;            /* Cor do ícone interna */
+    text-decoration: none;
+    font-size: 16px;           /* Controla o tamanho do ícone do Bootstrap */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Efeito ao passar o mouse por cima */
+.icone_social:hover {
+    color: white;             /* O ícone acende em branco */
+    border-color: white;       /* A borda acende em branco */
+    background-color: rgba(255, 255, 255, 0.1); /* Cria um fundo sutil */
+    transform: scale(1.1);     /* Dá um leve pulinho para interagir com o usuário */
+}
+
+
+
+
+
+/* Faixa azul brilhante na base inferior */
+.faixa_decorativa_final {
+    height: 60px;
+    background-color: #7477ff; 
+    width: 100%;
+}
+
+
+/* RESPONSIVIDADE (MEDIA QUERY PARA CELULARES)    */
+
+@media screen and (max-width: 768px) {
+    
+    /*  MENU SUPERIOR */
+    nav {
+        flex-direction: column; /* Empilha o logo e o menu verticalmente */
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .menu ul {
+        flex-direction: column; /* Links um embaixo do outro */
+        gap: 12px;
+    }
+
+    /* HERO SEC  */
+    .hero_sec {
+        height: auto;
+        min-height: 500px; /* Garante que o fundo não encolha demais */
+        padding-bottom: 80px; /* Dá espaço para a barra de pesquisa empilhada */
+    }
+
+    .titulo_central {
+        font-size: 32px; /* Diminui o texto para não quebrar linha feio no celular */
+        padding: 0 20px;
+        top: 35%; /* Sobe um pouco o título para dar espaço à barra */
+    }
+
+    /* BARRA DE PESQUISA  */
+    .barra_pesquisa {
+        flex-direction: column; /* Transforma a barra horizontal em um formulário vertical */
+        width: 92%;
+        gap: 15px;
+        padding: 20px;
+        bottom: -60px; /* Ajusta o encaixe flutuante na parte de baixo */
+        align-items: stretch; /* Força os inputs a ocuparem a largura total */
+    }
+
+    .btn_buscar {
+        width: 100%; /* Botão ocupa toda a largura no celular */
+        margin-top: 10px;
+    }
+
+    /* SEÇÃO PRÓXIMOS PASSEIOS */
+    .sec_passeios {
+        flex-direction: column; /* Texto fica em cima, grade de fotos embaixo */
+        gap: 40px;
+        padding: 100px 5% 50px 5%; /* Ajusta os espaçamentos */
+    }
+
+    .passeios_conteudo {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .linha_decorativa {
+        margin: 0 auto 30px auto; /* Centraliza a linha laranja abaixo do título */
+    }
+
+    .passeios_grid_fotos {
+        grid-template-columns: 1fr; /* As 4 fotos viram uma coluna única (1 por linha) */
+        width: 100%;
+    }
+
+    /* SEÇÃO DESTINOS  */
+    .sec_destinos {
+        padding: 60px 5%;
+    }
+
+    .destinos_titulo {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    .destinos_grid {
+        grid-template-columns: 1fr; /* Os 6 cards de destinos ficam empilhados (1 por linha) */
+        gap: 25px;
+    }
+
+    /*  SEÇÃO AVALIAÇÕES */
+    .carrossel_container {
+        gap: 10px; /* Aproxima as setas do texto no celular */
+    }
+
+    .depoimento_texto {
+        font-size: 14px; /* Diminui levemente o texto para caber em telas menores */
+    }
+
+    .avatar_wrapper {
+        width: 140px; /* Reduz um pouquinho a foto da Patrícia e dos outros */
+        height: 140px;
+    }
+
+    /* FOOTER */
+    .rodape_container {
+        flex-direction: column; /* As 3 colunas do rodapé viram uma só linha por linha */
+        text-align: center;
+        gap: 40px;
+        padding: 50px 5%;
+    }
+
+    .form_newsletter {
+        flex-direction: column; /* Input e botão de enviar empilham no celular */
+        align-items: stretch;
+    }
+
+    .icones_redes {
+        justify-content: center; /* Centraliza os ícones circulares do Bootstrap */
+    }
+}
